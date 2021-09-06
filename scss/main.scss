@@ -1,0 +1,279 @@
+$primaryColor: #f05f40;
+$secondaryColor: #212567;
+$home_bg: url("../dist/img/header.jpg");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+@mixin Transition {
+  transition: all 0.5s ease-in-out;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.width_float {
+  width: 50%;
+  float: left;
+}
+.extend__h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.extend__p {
+  margin: 1.5rem 0;
+  color: #c8c5bd;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.extend__span {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: $primaryColor;
+  margin: 1rem auto;
+}
+
+.extend__button__Primary {
+  background: $primaryColor;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: bold;
+  @include Transition;
+
+  &:hover {
+    color: $primaryColor;
+    background: #fff;
+  }
+}
+
+.extend__button__Secondary {
+  background: #fff;
+  color: $secondaryColor;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: bold;
+  @include Transition;
+
+  &:hover {
+    color: #fff;
+    background: $secondaryColor;
+    border: 1px solid #fff;
+  }
+}
+
+.get-touch {
+  text-align: center;
+  padding: 5rem 0;
+
+  h2 {
+    @extend .extend__h2;
+    color: $secondaryColor;
+  }
+
+  > span {
+    @extend .extend__span;
+  }
+
+  .touch {
+    display: flex;
+    justify-content: center;
+    .item {
+      margin: 2rem 1.5rem;
+
+      i {
+        display: block;
+        margin-bottom: 1rem;
+      }
+      span {
+        padding: 2rem;
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+header {
+  overflow: hidden;
+  background: #fff;
+
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  .logo {
+    @extend .width_float;
+    h2 {
+      color: #000;
+      padding: 8px 0;
+    }
+  }
+  ul {
+    @extend .width_float;
+    display: flex;
+    list-style: none;
+    padding: 15px 0;
+
+    li {
+      padding-left: 20px;
+      a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        @include Transition;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background: $home_bg;
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+
+  .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    @extend .extend__h2;
+  }
+
+  span {
+    @extend .extend__span;
+  }
+
+  p {
+    @extend .extend__p;
+  }
+
+  button {
+    @extend .extend__button__Primary;
+  }
+}
+
+.need {
+  background: $primaryColor;
+  padding: 2rem 0;
+  text-align: center;
+  h2 {
+    @extend .extend__h2;
+  }
+  p {
+    @extend .extend__p;
+    color: #fff;
+  }
+  span {
+    @extend .extend__span;
+    background: #fff;
+  }
+  button {
+    @extend .extend__button__Secondary;
+  }
+}
+
+.service {
+  padding: 5rem 0;
+  background: #fff;
+  text-align: center;
+
+  h2 {
+    @extend .extend__h2;
+    color: $secondaryColor;
+  }
+
+  span {
+    @extend .extend__span;
+  }
+
+  .service-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 5rem 0;
+
+    i {
+      color: $primaryColor;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      color: #333;
+    }
+
+    p {
+      color: #a4a4a4;
+    }
+  }
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0;
+  > div {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($primaryColor, 0.6);
+      opacity: 0;
+      @include Transition;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.download {
+  text-align: center;
+  background: $secondaryColor;
+  padding: 5rem 0;
+
+  h2 {
+    @extend .extend__h2;
+  }
+
+  button {
+    @extend .extend__button__Secondary;
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.width_float, header .logo, header ul {
+  width: 50%;
+  float: left;
+}
+
+.extend__h2, .get-touch h2, .home h2, .need h2, .service h2, .download h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.extend__p, .home p, .need p {
+  margin: 1.5rem 0;
+  color: #c8c5bd;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.extend__span, .get-touch > span, .home span, .need span, .service span {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #f05f40;
+  margin: 1rem auto;
+}
+
+.extend__button__Primary, .home button {
+  background: #f05f40;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.extend__button__Primary:hover, .home button:hover {
+  color: #f05f40;
+  background: #fff;
+}
+
+.extend__button__Secondary, .need button, .download button {
+  background: #fff;
+  color: #212567;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.extend__button__Secondary:hover, .need button:hover, .download button:hover {
+  color: #fff;
+  background: #212567;
+  border: 1px solid #fff;
+}
+
+.get-touch {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.get-touch h2 {
+  color: #212567;
+}
+
+.get-touch .touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.get-touch .touch .item {
+  margin: 2rem 1.5rem;
+}
+
+.get-touch .touch .item i {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.get-touch .touch .item span {
+  padding: 2rem;
+  color: #f05f40;
+}
+
+header {
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+header .logo h2 {
+  color: #000;
+  padding: 8px 0;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 15px 0;
+}
+
+header ul li {
+  padding-left: 20px;
+}
+
+header ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header ul li a:hover {
+  color: #f05f40;
+}
+
+.home {
+  background: url("../dist/img/header.jpg");
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.home .home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.need {
+  background: #f05f40;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.need p {
+  color: #fff;
+}
+
+.need span {
+  background: #fff;
+}
+
+.service {
+  padding: 5rem 0;
+  background: #fff;
+  text-align: center;
+}
+
+.service h2 {
+  color: #212567;
+}
+
+.service .service-parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 5rem 0;
+}
+
+.service .service-parent i {
+  color: #f05f40;
+}
+
+.service .service-parent h3 {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.service .service-parent p {
+  color: #a4a4a4;
+}
+
+.images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  font-size: 0;
+}
+
+.images > div {
+  position: relative;
+}
+
+.images > div img {
+  width: 100%;
+}
+
+.images > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 95, 64, 0.6);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.images > div:hover:after {
+  opacity: 1;
+}
+
+.download {
+  text-align: center;
+  background: #212567;
+  padding: 5rem 0;
+}
+
+.download button {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=main.css.map */
